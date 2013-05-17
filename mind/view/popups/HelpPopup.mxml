@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow title="About Mastermind"
+			   width="400"
+			   xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx">
+
+	<fx:Declarations>
+	</fx:Declarations>
+
+	<s:layout>
+		<s:VerticalLayout paddingBottom="10"
+						  paddingLeft="10"
+						  paddingRight="10"
+						  paddingTop="10"
+						  gap="15" />
+	</s:layout>
+
+	<s:VGroup width="100%">
+		<s:Label text="The Goal" fontWeight="bold" />
+		<s:Label text="The object of the game is to uncover a random 4-color combination, based on the clues resulting from comparing the combination entered by the player and the first one."
+				 width="100%"
+				 textAlign="justify" />
+	</s:VGroup>
+
+	<s:VGroup width="100%">
+		<s:Label text="Interpreting Results" fontWeight="bold" />
+		<s:Label text="Whenever the user inputs a color combination, the game displays a result by evaluating it against the one that was generated at the beginning of the game."
+				 width="100%"
+				 textAlign="justify" />
+	</s:VGroup>
+
+	<s:VGroup width="100%">
+		<s:Label text="Black &amp; White Dots" fontWeight="bold" />
+		<s:Label text="A result consists of zero to four white or black dots."
+				 width="100%"
+				 textAlign="justify" />
+
+		<s:Label text="The number of black dots represents the number of colors from the player's combination, that can be found on their correct position in the initial combination."
+				 width="100%"
+				 textAlign="justify" />
+
+		<s:Label text="The number of white dots equals the number of colors from the player's combination that are present in the initial combination, but on different positions."
+				 width="100%"
+				 textAlign="justify" />
+
+		<s:Label text="Colors that don't exist in the initial combination are not represented in results."
+				 width="100%"
+				 textAlign="justify" />
+	</s:VGroup>
+
+	<s:VGroup width="100%">
+		<s:Label text="Order of the Dots" fontWeight="bold" />
+		<s:Label text="The order of the dots does not correspond to the order of the colors in the player's combination. Each color is evaluated, and dots are displayed in the following order: first black, then white."
+				 width="100%"
+				 textAlign="justify" />
+
+		<s:Label text="In other words, the object of the game is to find a color combination which scors 4 black dots."
+				 width="100%"
+				 textAlign="justify" />
+	</s:VGroup>
+
+</s:TitleWindow>

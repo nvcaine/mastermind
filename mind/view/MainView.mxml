@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group width="100%"
+		 height="100%"
+		 xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:parsley="http://www.spicefactory.org/parsley"
+		 xmlns:view="mind.view.*">
+
+	<fx:Declarations>
+		<parsley:Configure />
+	</fx:Declarations>
+
+	<s:VGroup width="100%"
+			  height="100%"
+			  paddingBottom="10"
+			  paddingLeft="10"
+			  paddingRight="10"
+			  paddingTop="10">
+
+		<s:HGroup width="100%">
+			<s:Panel title="Main menu" width="100%">
+				<s:layout>
+					<s:VerticalLayout paddingBottom="10"
+									  paddingLeft="10"
+									  paddingRight="10"
+									  paddingTop="10" />
+				</s:layout>
+
+				<view:PaletteView />
+
+				<view:InitialView />
+			</s:Panel>
+
+			<s:Panel title="Current colors"
+					 width="100%"
+					 height="100%">
+
+				<s:layout>
+					<s:HorizontalLayout paddingBottom="10"
+										paddingLeft="10"
+										paddingRight="10"
+										paddingTop="10" />
+				</s:layout>
+
+				<view:ColorListView />
+			</s:Panel>
+		</s:HGroup>
+
+		<s:Panel title="Archive"
+				 width="100%"
+				 height="100%">
+
+			<s:layout>
+				<s:HorizontalLayout paddingBottom="10"
+									paddingLeft="10"
+									paddingRight="10"
+									paddingTop="10" />
+			</s:layout>
+
+			<view:CombinationView />
+		</s:Panel>
+	</s:VGroup>
+
+	<view:PopupsView />
+
+	<fx:Script>
+		<![CDATA[
+			import mind.presenter.MainPresenter;
+
+			[Inject]
+			[Bindable]
+			public var presenter :MainPresenter;
+		]]>
+	</fx:Script>
+</s:Group>

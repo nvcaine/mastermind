@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer autoDrawBackground="true"
+				xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx">
+
+	<s:HGroup width="100%"
+			  verticalAlign="middle"
+			  paddingBottom="2"
+			  paddingLeft="4"
+			  paddingRight="4"
+			  paddingTop="2">
+
+		<s:List id="colorList"
+				dataProvider="{data.getColors()}"
+				borderVisible="false"
+				itemRenderer="mind.view.renderer.ColorItem">
+			<s:layout>
+				<s:HorizontalLayout />
+			</s:layout>
+		</s:List>
+
+		<s:List id="results"
+				dataProvider="{data.getResults()}"
+				borderVisible="false"
+				itemRenderer="mind.view.renderer.ResultItem">
+			<s:layout>
+				<s:HorizontalLayout />
+			</s:layout>
+		</s:List>
+	</s:HGroup>
+
+</s:ItemRenderer>

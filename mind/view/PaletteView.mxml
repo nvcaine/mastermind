@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup width="100%"
+		  height="100%"
+		  xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  xmlns:parsley="http://www.spicefactory.org/parsley">
+
+	<fx:Declarations>
+		<parsley:Configure />
+	</fx:Declarations>
+
+	<s:HGroup width="100%">
+		<s:Button label="New game" click="presenter.startNewGame()" />
+
+		<s:Button label="Undo" click="presenter.undoColor()" />
+
+		<s:Button label="Help" click="presenter.showHelp()" />
+	</s:HGroup>
+
+	<s:List id="colorPalette"
+			dataProvider="{presenter.colors}"
+			width="100%"
+			borderVisible="false"
+			selectionColor="0xFFFFFF"
+			rollOverColor="0xFFFFFF"
+			itemRenderer="mind.view.renderer.ColorItem"
+			change="presenter.addColor(colorPalette.selectedItem); colorPalette.selectedIndex = -1;">
+		<s:layout>
+			<s:HorizontalLayout />
+		</s:layout>
+	</s:List>
+
+	<fx:Script>
+		<![CDATA[
+			import mind.presenter.PaletterPresenter;
+
+			[Inject]
+			[Bindable]
+			public var presenter :PaletterPresenter;
+		]]>
+	</fx:Script>
+</s:VGroup>

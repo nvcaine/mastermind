@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer autoDrawBackground="true"
+				xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx">
+
+	<s:BorderContainer width="20"
+					   height="20"
+					   backgroundColor="{getBackgroundColor(data.result)}"
+					   borderColor="0x777777"
+					   borderStyle="solid"
+					   borderWeight="2"
+					   cornerRadius="2" />
+
+	<fx:Script>
+		<![CDATA[
+			import mind.model.Results;
+
+			private function getBackgroundColor ( value :Number ) :Number
+			{
+				var result :Number = 0xFFFFFF;
+
+				if ( value == Results.BLACK )
+					result = 0x000000;
+
+				return result;
+			}
+		]]>
+	</fx:Script>
+</s:ItemRenderer>

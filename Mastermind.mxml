@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application minWidth="955"
+			   minHeight="600"
+			   xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:parsley="http://www.spicefactory.org/parsley"
+			   xmlns:view="mind.view.*">
+
+	<fx:Declarations>
+		<parsley:ContextBuilder>
+			<parsley:FlexConfig type="{MastermindConfig}" />
+		</parsley:ContextBuilder>
+
+		<parsley:Configure />
+	</fx:Declarations>
+
+	<view:MainView />
+</s:Application>

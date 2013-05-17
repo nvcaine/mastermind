@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup width="100%"
+		  height="35"
+		  verticalAlign="middle"
+		  xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  xmlns:parsley="http://www.spicefactory.org/parsley">
+
+	<fx:Declarations>
+		<parsley:Configure />
+	</fx:Declarations>
+
+	<s:List id="initialColors"
+			dataProvider="{presenter.initialColors}"
+			borderVisible="false"
+			selectionColor="0xFFFFFF"
+			rollOverColor="0xFFFFFF"
+			itemRenderer="mind.view.renderer.ColorItem"
+			visible="{presenter.solutionAvailable}"
+			includeInLayout="{presenter.solutionAvailable}">
+		<s:layout>
+			<s:HorizontalLayout />
+		</s:layout>
+	</s:List>
+
+	<s:Label text="Color combination" fontWeight="bold" />
+
+	<fx:Script>
+		<![CDATA[
+			import mind.presenter.PaletterPresenter;
+
+			[Inject]
+			[Bindable]
+			public var presenter :PaletterPresenter;
+		]]>
+	</fx:Script>
+</s:HGroup>
